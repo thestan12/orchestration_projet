@@ -1,6 +1,3 @@
-// Protractor configuration file, see link for more information
-// https://github.com/angular/protractor/blob/master/lib/config.ts
-
 const { SpecReporter } = require('jasmine-spec-reporter');
 
 exports.config = {
@@ -9,7 +6,15 @@ exports.config = {
     './src/**/*.e2e-spec.ts'
   ],
   capabilities: {
-    'browserName': 'chrome'
+    'browserName': 'chrome',
+    // new
+    'chromeOptions': {
+      'args': [
+        '--no-sandbox',
+        '--headless',
+        '--window-size=1024,768'
+      ]
+    }
   },
   directConnect: true,
   baseUrl: 'http://localhost:4200/',
@@ -26,3 +31,4 @@ exports.config = {
     jasmine.getEnv().addReporter(new SpecReporter({ spec: { displayStacktrace: true } }));
   }
 };
+
