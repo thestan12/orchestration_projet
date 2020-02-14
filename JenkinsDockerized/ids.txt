@@ -1,0 +1,2 @@
+REPOSITORY          TAG                 IMAGE ID            CREATED             SIZE
+jenkins/jenkins     2.60.3              c7d3b6093b29        2 years ago         811MB
